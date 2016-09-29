@@ -2,6 +2,13 @@
 
 Scripts en Python 3 para [scrapear](https://es.wikipedia.org/wiki/Web_scraping) los Registros Civiles (RRCC) de la web [http://www.registro-civil.com.mx/](http://www.registro-civil.com.mx/).
 
+## Requerimientos
+
+* Python 3
+* Librería BeautifulSoup 4
+
+## Como funciona
+
 El fichero `urls.txt` contiene las URLs donde están los listados de los RRCC de las entidades.
 
 El script `scrape_rcs.py` lee las urls del fichero `urls.txt` y extrae la información de las **oficialias**, contenidas en una tabla, y las guarda en ficheros [CSV](https://es.wikipedia.org/wiki/CSV), uno por cada URL en la carpeta `data/not-geocoded`.
