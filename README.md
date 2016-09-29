@@ -16,7 +16,7 @@ El fichero [`urls.txt`](https://github.com/oxcarh/scraper-registros-civiles/blob
 
 ### Scrapeo de ubicaciones
 
-El script `scrape_rrcc.py` lee las urls del fichero `urls.txt` y extrae la información de las **oficialias**, contenidas en una tabla, y las guarda en ficheros [CSV](https://es.wikipedia.org/wiki/CSV), uno por cada URL en la carpeta `data/not-geocoded`.
+El script [`scrape_rrcc.py`](https://github.com/oxcarh/scraper-registros-civiles/blob/master/scrape_rrcc.py) lee las urls del fichero `urls.txt` y extrae la información de las **oficialias**, contenidas en una tabla, y las guarda en ficheros [CSV](https://es.wikipedia.org/wiki/CSV), uno por cada URL en la carpeta [`data/not-geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/not-geocoded).
 
 Estos ficheros CSV contienen la información de los RRCC, con los campos:
 
@@ -29,9 +29,9 @@ Estos ficheros CSV contienen la información de los RRCC, con los campos:
 
 ### Geocodificación de las ubicaciones
 
-Los ficheros CSV en la carpeta `data/not-geocoded` no contienen ubicación (latitud, longitud), solo la dirección.
+Los ficheros CSV en la carpeta [`data/not-geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/not-geocoded) no contienen ubicación (latitud, longitud), solo la dirección.
 
-El script `geocode_rrcc.py` lee los ficheros CSV de la carpeta `data/not-geocoded` intenta geocodificar las direcciones y guarda el resultado en la carpeta `data/geocoded`.
+El script [`geocode_rrcc.py`](https://github.com/oxcarh/scraper-registros-civiles/blob/master/geocode_rrcc.py) lee los ficheros CSV de la carpeta [`data/not-geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/not-geocoded) intenta geocodificar las direcciones y guarda el resultado en la carpeta `data/geocoded`.
 
 ***Nota:*** Para la geocodificación se usó Google y ArcGis como servicios, y muchas direcciones no regresan localización, y algunas regresan localizaciones erróneas. Es necesario revisar mejor los datos para obtener localizaciones correctas.
 
