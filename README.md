@@ -7,7 +7,8 @@ Scripts para [scrapear](https://es.wikipedia.org/wiki/Web_scraping) la ubicació
 ## Requerimientos
 
 * Python 3
-* Librería BeautifulSoup 4
+* Librería [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)
+* Librería [Geocoder](http://geocoder.readthedocs.io/)
 
 ## Como funciona
 
@@ -32,7 +33,7 @@ Los ficheros CSV en la carpeta `data/not-geocoded` no contienen ubicación (lati
 
 El script `geocode_rrcc.py` lee los ficheros CSV de la carpeta `data/not-geocoded` intenta geocodificar las direcciones y guarda el resultado en la carpeta `data/geocoded`.
 
-***Nota:*** Para la geocodificación se usó Google como servicio, y muchas direcciones no regresan localización, y algunas regresan localizaciones erróneas. Es necesario revisar mejor los datos para obtener localizaciones correctas.
+***Nota:*** Para la geocodificación se usó Google y ArcGis como servicios, y muchas direcciones no regresan localización, y algunas regresan localizaciones erróneas. Es necesario revisar mejor los datos para obtener localizaciones correctas.
 
 ## Notas
 La web scrapeada no contiene información referente a los Registros Civiles de la entidad de Colima.
