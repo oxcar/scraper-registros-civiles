@@ -1,4 +1,4 @@
-"entidad","nombre_registro","direccion","latitud","longitud","contacto"
-"tabasco","Registro Civil de Villahermosa","José N. Rovirosa s/n esq. Nicolás Bravo, Col. Centro, C.P. 86000, Villahermosa, Tab.","","","01 993 312 86 95"
-"tabasco","SEDESOL Modalidad Identidad Juridica en el Estado","Priv. Del Camino n° 17, Col. 1° de Mayo, C.P. 86190 Centro Tab.","","","01 99 33 15 35 73 ext. 115"
-"tabasco","Módulo: Instituto Nacional de Migración Delegación Regional Tabasco","Av. Paseo Usumacinta n° 927, Fracc. José Colomo, Centro, Tabasco.","","","01 993 313 61 05"
+"entidad","nombre_registro","direccion","direccion_limpio","latitud","longitud","contacto"
+"TABASCO","REGISTRO CIVIL DE VILLAHERMOSA","José N. Rovirosa s/n esq. Nicolás Bravo, Col. Centro, C.P. 86000, Villahermosa, Tab.","JOSÉ N ROVIROSA S/N ESQUINA NICOLÁS BRAVO, COLONIA CENTRO, CP 86000, VILLAHERMOSA, TAB","","","01 993 312 86 95"
+"TABASCO","SEDESOL MODALIDAD IDENTIDAD JURIDICA EN EL ESTADO","Priv. Del Camino n° 17, Col. 1° de Mayo, C.P. 86190 Centro Tab.","PRIV DEL CAMINO N° 17, COLONIA 1° DE MAYO, CP 86190 CENTRO TAB","","","01 99 33 15 35 73 ext. 115"
+"TABASCO","MÓDULO: INSTITUTO NACIONAL DE MIGRACIÓN DELEGACIÓN REGIONAL TABASCO","Av. Paseo Usumacinta n° 927, Fracc. José Colomo, Centro, Tabasco.","AVENIDA PASEO USUMACINTA N° 927, FRACC JOSÉ COLOMO, CENTRO, TABASCO","","","01 993 313 61 05"

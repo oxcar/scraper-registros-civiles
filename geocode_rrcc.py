@@ -1,6 +1,7 @@
 import csv
 import geocoder
 import time
+import sys
 from os import listdir
 from os.path import isfile, join
 
@@ -22,23 +23,30 @@ def main():
             for row in csv_reader:
                 entity = row[0]
                 location = row[2]
+                location_clean = row[3]
                 latlng = None
 
                 retries = 0
                 while latlng is None:
                     try:
-                        latlng = geocoder.arcgis(entity + " " + location).latlng
-                        if latlng is not None and len(latlng) == 0:
+                        latlng = geocoder.arcgis(entity + " " + location_clean).latlng
+
+                        if latlng is None:
+                            retries += 1
+                            time.sleep(2)
+                        elif latlng is not None and len(latlng) == 0:
                             latlng = None
                             retries += 1
-                            time.sleep(retries)
-                        elif latlng is None:
-                            retries += 1
-                            time.sleep(retries)
+                            time.sleep(2)
                         else:
                             retries = 0
+
+                        print("Retries: {}".format(retries))
+                        if retries >= 5:
+                            latlng = [0, 0]
                     except:
                         print("Exception: error geocoding with Google")
+                        print("Exception: %s : %s" % (sys.exc_info()[0], sys.exc_info()[2]))
 
                 print(latlng)
                 if latlng is not None and len(latlng) > 0:
