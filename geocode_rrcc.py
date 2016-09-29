@@ -22,7 +22,6 @@ def main():
 
             for row in csv_reader:
                 entity = row[0]
-                location = row[2]
                 location_clean = row[3]
                 latlng = None
 
@@ -31,18 +30,15 @@ def main():
                     try:
                         latlng = geocoder.arcgis(entity + " " + location_clean).latlng
 
-                        if latlng is None:
-                            retries += 1
-                            time.sleep(2)
-                        elif latlng is not None and len(latlng) == 0:
+                        if latlng is None or len(latlng) == 0:
                             latlng = None
                             retries += 1
-                            time.sleep(2)
+                            time.sleep(1)
+                            print("Retries: {}".format(retries))
                         else:
                             retries = 0
 
-                        print("Retries: {}".format(retries))
-                        if retries >= 5:
+                        if retries >= 1:
                             latlng = [0, 0]
                     except:
                         print("Exception: error geocoding with Google")
@@ -50,8 +46,8 @@ def main():
 
                 print(latlng)
                 if latlng is not None and len(latlng) > 0:
-                    row[3] = latlng[0]
-                    row[4] = latlng[1]
+                    row[4] = latlng[0]
+                    row[5] = latlng[1]
 
                 csv_writer.writerow(row)
 
