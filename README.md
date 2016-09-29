@@ -31,9 +31,9 @@ Estos ficheros CSV contienen la información de los RRCC, con los campos:
 
 Los ficheros CSV en la carpeta [`data/not-geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/not-geocoded) no contienen ubicación (latitud, longitud), solo la dirección.
 
-El script [`geocode_rrcc.py`](https://github.com/oxcarh/scraper-registros-civiles/blob/master/geocode_rrcc.py) lee los ficheros CSV de la carpeta [`data/not-geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/not-geocoded) intenta geocodificar las direcciones y guarda el resultado en la carpeta `data/geocoded`.
+El script [`geocode_rrcc.py`](https://github.com/oxcarh/scraper-registros-civiles/blob/master/geocode_rrcc.py) lee los ficheros CSV de la carpeta [`data/not-geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/not-geocoded) intenta geocodificar las direcciones y guarda el resultado en la carpeta [`data/geocoded`](https://github.com/oxcarh/scraper-registros-civiles/tree/master/data/geocoded).
 
-***Nota:*** Para la geocodificación se usó Google y ArcGis como servicios, y muchas direcciones no regresan localización, y algunas regresan localizaciones erróneas. Es necesario revisar mejor los datos para obtener localizaciones correctas.
+***Nota importante:*** Para la geocodificación se usó el servicio de Google, y muchas direcciones no regresan localización, y algunas regresan geolocalizaciones erróneas. Es necesario revisar mejor los datos para obtener geolocalizaciones correctas a partir de las direcciones de los RRCC.
 
 ## Notas
 La web scrapeada no contiene información referente a los Registros Civiles de la entidad de Colima.
