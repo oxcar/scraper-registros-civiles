@@ -1,9 +1,10 @@
 import csv
-import geocoder
-import time
 import sys
+import time
 from os import listdir
 from os.path import isfile, join
+
+import geocoder
 
 
 def main():
