@@ -12,7 +12,7 @@ Scripts para [scrapear](https://es.wikipedia.org/wiki/Web_scraping) la ubicació
 
 ## Como funciona
 
-El fichero `urls.txt` contiene las URLs donde están los listados de los RRCC de las entidades.
+El fichero [`urls.txt`](https://github.com/oxcarh/scraper-registros-civiles/blob/master/urls.txt) contiene las URLs donde están los listados de los RRCC de las entidades.
 
 ### Scrapeo de ubicaciones
 
